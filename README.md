@@ -66,7 +66,10 @@ The project is organized into the following modules:
 
     Open your browser and navigate to [http://localhost:8761](http://localhost:8761) to view the Eureka server dashboard.
 
-5. Access Gateway Service:
+   ![image](https://github.com/rmakaoui/MicroService_docker/assets/101502312/9ec33fe2-c9bc-421b-bc07-c418a1cbbf69)
+
+
+6. Access Gateway Service:
 
     The Gateway Service is available at [http://localhost:8888](http://localhost:8888).
 
@@ -78,9 +81,15 @@ The project is organized into the following modules:
   
 - **Client Service**:
     - http://localhost:8088/clients/**
+ 
+   ![image](https://github.com/rmakaoui/MicroService_docker/assets/101502312/fa711084-e0fd-4830-a668-5f8dbb918b14)
+
 
 - **Voiture Service**:
     - http://localhost:8089/voitures/**
+
+  ![image](https://github.com/rmakaoui/MicroService_docker/assets/101502312/8af2ae54-ec3e-47c7-9122-504ee40231ee)
+
 
 ## Notes
 
