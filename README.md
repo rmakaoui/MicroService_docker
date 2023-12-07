@@ -34,6 +34,9 @@ The project is organized into the following modules:
   
 - **eureka-service**: Service registry and discovery module.
 
+![image](https://github.com/rmakaoui/MicroService_docker/assets/101502312/0cfdb0d5-5a23-434b-af52-01ca5ce29a12)
+
+
 ## Database Configuration
 
 - **dbMS1**: Database for the `client-service`.
