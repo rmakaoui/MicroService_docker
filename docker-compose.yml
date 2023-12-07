@@ -18,7 +18,28 @@ services:
       context: ./Client/Client
       dockerfile: Dockerfile
     environment:
-      - "EUREKA_SERVER=http://eureka-server:8761/eureka"
+      - EUREKA_SERVER=eureka-server
+      - SPRING_PROFILES_ACTIVE=docker
+      - MYSQL_HOST=mysql
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=root
+      - MYSQL_PORT=3306
+    depends_on:
+      - eureka-server
+      - mysql
+    networks:
+      - app-network
+
+  service-voiture:
+    container_name: SERVICE-VOITURE
+    restart: always
+    ports:
+      - "8089:8089"
+    build:
+      context: ./Voiture
+      dockerfile: Dockerfile
+    environment:
+      - EUREKA_SERVER=eureka-server
       - SPRING_PROFILES_ACTIVE=docker
       - MYSQL_HOST=mysql
       - MYSQL_USER=root
