@@ -8,6 +8,16 @@ services:
     build: ./Eureka_Server/Eureka_Server
     networks:
       - app-network
+  gateway-server:
+    container_name: gateway-server
+    restart: always
+    ports:
+      - "8888:8888"
+    build: ./GateWay/GateWay
+    environment:
+      - EUREKA_SERVER=eureka-server
+    networks:
+      - app-network
 
   service-client:
     container_name: service-client
@@ -41,6 +51,7 @@ services:
     environment:
       - EUREKA_SERVER=eureka-server
       - SPRING_PROFILES_ACTIVE=docker
+      - SERVICE-CLIENT=service-client
       - MYSQL_HOST=mysql
       - MYSQL_USER=root
       - MYSQL_PASSWORD=root
